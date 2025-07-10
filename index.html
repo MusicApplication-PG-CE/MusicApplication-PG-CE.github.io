@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="font.css">
+        <style>
+            body{
+                margin: 0;
+                --background-rgb: 30, 30, 30;
+                --text-color:#ffffff;
+                color: var(--text-color);
+                font-family: '__main_font';
+            }
+            .background_image::before {
+                content: "";
+                position: fixed;
+                display: block;
+                background-image: url("./bg1.jpg");
+                --blur-strength:5px;
+                filter: blur(var(--blur-strength));
+                -webkit-filter: blur(var(--blur-strength));
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: -1;
+                background-size:cover;
+                width: 100%;
+                height: 100%;
+
+            }
+            .main_container {
+                box-sizing: border-box;
+                padding-top:100px;
+                padding-bottom:50px;
+                align-items: center;
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .main_container_child {
+                border-radius: 4px;
+                margin:30px;
+                padding: 15px;
+                background: rgb(var(--background-rgb));
+                height:fit-content;
+            }
+            .main_download_box {
+                width:20%;
+            }
+            .main_download_box_download_button {
+                display: block;
+                width: fit-content;
+                text-decoration: none;
+                color:inherit;
+                margin: 5px 10px;
+                padding: 10px;
+                background-color: #0cbe33;
+                border-radius: 5px;
+            }
+            .text { 
+                padding: 10px;
+                background-color: rgb(var(--background-rgb));
+            }
+            .title {
+                border-radius: 4px;
+
+                width: fit-content;
+                margin-right: auto;
+                font-size: max(3vw,30px);
+            }
+            .title_desc {
+                width: fit-content;
+                margin-left:10%;
+                font-size: max(1vw,15px);
+                border-radius: 4px;
+            }
+            .download_button {
+                width:fit-content;
+                justify-items: center;
+            }
+            .horizontal_button_container {
+                display:flex;
+                justify-content:center;
+            }
+            h1 {
+                margin-top:0;
+                margin-bottom:0;
+            }
+            .main_full_page {
+                height:100vh;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main_full_page background_image">
+            <div class="main_container ">
+                <div class="main_container_child" style="background-color: unset; width:50%;min-width: 500px">
+                    <h1 class="title text">
+                        Music Application
+                    </h1>
+                    <div class="title_desc text" style="background-color: rgb(var(--background-rgb));">
+                        This is a free, open-source desktop application that allows users 
+                        to download music from the internet. It supports searching, previewing, 
+                        and downloading audio files from multiple online sources. The interface 
+                        is simple, with features like batch downloads, metadata tagging, and automatic file organization. It runs on Windows, macOS, and Linux, and does not include ads or tracking. Users can view and modify the source code or contribute to development.
+                    </div>
+                </div>
+                <div class="main_container_child main_download_box" style="min-width: 200px">
+                    <div style="font-size:large; width: fit-content; margin:0px auto">
+                        Download
+                    </div>
+                    <div style="padding-top:10px"></div>
+                    <div class="horizontal_button_container">
+                        <div class="download_button">
+                            <img src="https://code.visualstudio.com/assets/images/windows-logo.png" alt="Image of Windows Logo" style="vertical-align: middle;" width="40px" height="40px" title="Windows 10 Logo">
+                            <a class="main_download_box_download_button" href="https://www.google.com" title="Download Windows Executable File">
+                                Windows 
+                            </a>
+                            (.exe)
+                        </div>
+                        <div class="download_button">
+                            <a href="https://github.com/MusicApplication-PG-CE/Music-Application">
+                                <img src="static/github-circle.png" alt="Image of Windows Logo" style="vertical-align: middle;" width="40px" height="40px" title="Go to Github Repo">
+                            </a>
+                            <a class="main_download_box_download_button" href="https://github.com/MusicApplication-PG-CE/Music-Application/archive/refs/heads/main.zip" title="Download Current Repo as Zip">
+                                Source
+                            </a>
+                            (.zip)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="justify-items: center;padding-top:10vh">
+                <img style="display: block;" src="/static/chevron-down.svg" alt="">
+                <img src="/static/chevron-down.svg" alt="">
+            </div>
+        </div>
+            
+        <div style="display:block;width:100%;background-color: rgb(var(--background-rgb)); padding-bottom:1px;padding-top:1px">
+            <div style="margin:30px 10%">
+                <h2>
+                    Mission Statement
+                </h2>
+                The mission is to create and maintain open source software and applications that remain free and accessible under a permissive 
+                license, ensuring long-term usability without cost or restriction. This approach stands in response to a digital landscape where 
+                essential tools are often locked behind paywalls or constrained by proprietary control. By removing barriers to access, the goal 
+                is to support innovation and enabling anyone, anywhere, to use, learn from, and build upon these applications.
+            </div>
+            <div style="margin:30px 10%">
+                <h2>
+                    <a href="https://github.com/MusicApplication-PG-CE/Music-Application/issues" style="color:unset;text-decoration: none;">
+                        Report A Bug
+                    </a>
+                </h2>
+                Please report all bugs <a href="https://github.com/MusicApplication-PG-CE/Music-Application/issues" style="color:#8080ff;">here</a>.
+                We use github's issue system, if you are unsure how to report a bug, you visit 
+                <a href="https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue" >this</a> page for help.
+            </div>
+            <div style="margin:30px 10%">
+                <h2>
+                    Credits / About Us
+                </h2>
+                Thanks to all the people who made this possible.
+                <div style="display:flex;flex-wrap: wrap;justify-content: center;">
+                    <span>lgarciasanchez</span>
+                </div>
+            </div>
+            <div>
+                Made with HTML and CSS :)
+            </div>
+        </div>
+    </body>
+    <!-- https://code.visualstudio.com/assets/images/apple-logo-inverted.svg -->
+    <!-- https://code.visualstudio.com/assets/images/linux-logo.png -->
+    <!-- https://code.visualstudio.com/assets/images/windows-logo.png -->
+</html>
